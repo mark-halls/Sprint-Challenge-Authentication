@@ -17,10 +17,9 @@ router.post(
   userBodyValidation([`username`, `password`]),
   (req, res) => {
     // implement registration
-
     const { username, password } = req.body;
     const hash = bcrypt.hashSync(password, 10);
-    const token = signToken({ username: username });
+    const token = signToken({ username });
 
     Users.add({ username, password: hash })
       .then(saved => {
