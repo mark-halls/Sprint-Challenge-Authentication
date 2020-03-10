@@ -1,3 +1,7 @@
+#db
+auth.db3
+testing.db3
+
 # Logs
 logs
 *.log
